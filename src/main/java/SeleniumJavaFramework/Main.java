@@ -23,5 +23,27 @@ public class Main {
         } else {
             System.out.println(note + " : Insuffisant");
         }
+
+        // Exercice 4 : while (à compléter)
+        int k = 10;
+        while (k >= 2) {
+            System.out.println(k);
+            k -= 2;
+        }
+
+        // Exercice 5 : tableau
+        int[] notes = {12, 15, 9, 18, 7};
+
+// 1. Afficher chaque note
+        for (int i = 0; i < notes.length; i++) {
+            System.out.println(notes[i]);
+        }
+
+// 2. Calculer la somme
+        int somme = 0;
+        for (int i = 0; i < notes.length; i++) {
+            somme += notes[i];
+        }
+        System.out.println("Somme : " + somme);
     }
 }
