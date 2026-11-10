@@ -24,7 +24,7 @@ public class Main {
             System.out.println(note + " : Insuffisant");
         }
 
-        // Exercice 4 : while (à compléter)
+        // Exercice 4 : while
         int k = 10;
         while (k >= 2) {
             System.out.println(k);
@@ -34,16 +34,23 @@ public class Main {
         // Exercice 5 : tableau
         int[] notes = {12, 15, 9, 18, 7};
 
-// 1. Afficher chaque note
         for (int i = 0; i < notes.length; i++) {
             System.out.println(notes[i]);
         }
 
-// 2. Calculer la somme
         int somme = 0;
         for (int i = 0; i < notes.length; i++) {
             somme += notes[i];
         }
         System.out.println("Somme : " + somme);
+
+        // Défi : la plus grande note
+        int max = notes[0];
+        for (int i = 1; i < notes.length; i++) {
+            if (notes[i] > max) {
+                max = notes[i];
+            }
+        }
+        System.out.println("Max : " + max);
     }
 }
