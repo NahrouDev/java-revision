@@ -44,7 +44,7 @@ public class Main {
         }
         System.out.println("Somme : " + somme);
 
-        // Défi : la plus grande note
+        // Le plus grand
         int max = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] > max) {
@@ -52,5 +52,14 @@ public class Main {
             }
         }
         System.out.println("Max : " + max);
+
+        // Le plus petit (nouveau)
+        int min = notes[0];
+        for (int i = 1; i < notes.length; i++) {
+            if (notes[i] < min) {
+                min = notes[i];
+            }
+        }
+        System.out.println("Min : " + min);
     }
 }
