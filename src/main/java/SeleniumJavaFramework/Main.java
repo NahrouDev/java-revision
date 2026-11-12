@@ -6,6 +6,15 @@ public class Main {
         return n % 2 == 0;
     }
 
+    // Exercice 6 : à compléter
+    static int maximum(int a, int b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
     public static void main(String[] args) {
         // estPair
         System.out.println(estPair(4));
@@ -53,7 +62,7 @@ public class Main {
         }
         System.out.println("Max : " + max);
 
-        // Le plus petit (nouveau)
+        // Le plus petit
         int min = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] < min) {
@@ -61,5 +70,9 @@ public class Main {
             }
         }
         System.out.println("Min : " + min);
+
+        // Exercice 6 : appel de maximum
+        System.out.println(maximum(8, 5));
+        System.out.println(maximum(3, 10));
     }
 }
