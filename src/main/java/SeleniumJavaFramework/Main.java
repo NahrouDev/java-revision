@@ -6,13 +6,21 @@ public class Main {
         return n % 2 == 0;
     }
 
-    // Exercice 6 : à compléter
     static int maximum(int a, int b) {
         if (a > b) {
             return a;
         } else {
             return b;
         }
+    }
+
+    // Exercice 7 : à compléter
+    static int somme(int[] tab) {
+        int total = 0;
+        for (int i = 0; i < tab.length; i++) {
+            total += tab[i];
+        }
+        return total;
     }
 
     public static void main(String[] args) {
@@ -71,8 +79,13 @@ public class Main {
         }
         System.out.println("Min : " + min);
 
-        // Exercice 6 : appel de maximum
+        // Exercice 6 : maximum de deux nombres
         System.out.println(maximum(8, 5));
         System.out.println(maximum(3, 10));
+
+        // Exercice 7 : somme avec une méthode
+        int[] a = {4, 8, 1};
+        System.out.println(somme(a));
+        System.out.println(somme(notes));
     }
 }
