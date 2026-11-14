@@ -87,5 +87,24 @@ public class Main {
         int[] a = {4, 8, 1};
         System.out.println(somme(a));
         System.out.println(somme(notes));
+
+        // Exercice 8 : String
+        String mot = "Bonjour";
+        System.out.println(mot.length());
+        System.out.println(mot.charAt(3));
+        System.out.println(mot.toUpperCase());
+        System.out.println(mot.contains("jour"));
+
+// À compléter : afficher le dernier caractère de mot
+        System.out.println(mot.charAt(6));
+
+// À compléter : afficher "Bon"
+        System.out.println(mot.substring(0, 3));
+
+        String attendu = "Connexion reussie";
+        String obtenu = "connexion reussie";
+
+        System.out.println(attendu.equals(obtenu));
+        System.out.println(attendu.equalsIgnoreCase(obtenu));
     }
 }
