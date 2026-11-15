@@ -108,10 +108,10 @@ public class Main {
         // Exercice 10
         afficherTableau(notes);
 
-        Personne p1 = new Personne("Karim",25);
-        p1.sePresenter();
-
-        Personne p2 = new Personne("Sara",30);
-        p2.sePresenter();
+        Personne p1 = new Personne("Karim", 25);
+        System.out.println(p1.getNom());   // Karim
+        p1.setAge(26);
+        p1.setAge(-50);                    // refusé par le if
+        p1.sePresenter();                  // Je m'appelle Karim, j'ai 26 ans
     }
 }
