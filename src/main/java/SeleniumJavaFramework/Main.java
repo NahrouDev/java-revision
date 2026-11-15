@@ -14,7 +14,6 @@ public class Main {
         }
     }
 
-    // Exercice 7 : à compléter
     static int somme(int[] tab) {
         int total = 0;
         for (int i = 0; i < tab.length; i++) {
@@ -23,14 +22,8 @@ public class Main {
         return total;
     }
 
-    public static void main(String[] args) {
-        // estPair
-        System.out.println(estPair(4));
-        System.out.println(estPair(7));
-
-        // Exercice 3 : une seule note
-        int note = 18;
-
+    // Nouveau : méthode void, elle affiche et ne rend rien
+    static void afficherMention(int note) {
         if (note >= 16) {
             System.out.println(note + " : Excellent");
         } else if (note >= 12 && note <= 15) {
@@ -40,6 +33,19 @@ public class Main {
         } else {
             System.out.println(note + " : Insuffisant");
         }
+    }
+
+    // Exercice 10 : à compléter
+    static void afficherTableau(int[] tab) {
+        for (int i = 0; i < tab.length; i++) {
+            System.out.println(tab[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        // estPair
+        System.out.println(estPair(4));
+        System.out.println(estPair(7));
 
         // Exercice 4 : while
         int k = 10;
@@ -51,15 +57,11 @@ public class Main {
         // Exercice 5 : tableau
         int[] notes = {12, 15, 9, 18, 7};
 
+        int total = 0;
         for (int i = 0; i < notes.length; i++) {
-            System.out.println(notes[i]);
+            total += notes[i];
         }
-
-        int somme = 0;
-        for (int i = 0; i < notes.length; i++) {
-            somme += notes[i];
-        }
-        System.out.println("Somme : " + somme);
+        System.out.println("Somme : " + total);
 
         // Le plus grand
         int max = notes[0];
@@ -79,11 +81,9 @@ public class Main {
         }
         System.out.println("Min : " + min);
 
-        // Exercice 6 : maximum de deux nombres
+        // Exercice 6 et 7 : méthodes
         System.out.println(maximum(8, 5));
         System.out.println(maximum(3, 10));
-
-        // Exercice 7 : somme avec une méthode
         int[] a = {4, 8, 1};
         System.out.println(somme(a));
         System.out.println(somme(notes));
@@ -91,20 +91,21 @@ public class Main {
         // Exercice 8 : String
         String mot = "Bonjour";
         System.out.println(mot.length());
-        System.out.println(mot.charAt(3));
-        System.out.println(mot.toUpperCase());
-        System.out.println(mot.contains("jour"));
-
-// À compléter : afficher le dernier caractère de mot
         System.out.println(mot.charAt(6));
-
-// À compléter : afficher "Bon"
         System.out.println(mot.substring(0, 3));
 
+        // Exercice 9 : comparer des String
         String attendu = "Connexion reussie";
         String obtenu = "connexion reussie";
-
         System.out.println(attendu.equals(obtenu));
         System.out.println(attendu.equalsIgnoreCase(obtenu));
+
+        // Nouveau : méthodes void
+        afficherMention(18);
+        afficherMention(13);
+        afficherMention(5);
+
+        // Exercice 10
+        afficherTableau(notes);
     }
 }
