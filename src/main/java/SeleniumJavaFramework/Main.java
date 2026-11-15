@@ -108,14 +108,10 @@ public class Main {
         // Exercice 10
         afficherTableau(notes);
 
-        Personne p1 = new Personne();
-        p1.nom = "Karim";
-        p1.age = 25;
+        Personne p1 = new Personne("Karim",25);
         p1.sePresenter();
 
-        Personne p2 = new Personne();
-        p2.nom = "Sara";
-        p2.age = 30;
+        Personne p2 = new Personne("Sara",30);
         p2.sePresenter();
     }
 }
