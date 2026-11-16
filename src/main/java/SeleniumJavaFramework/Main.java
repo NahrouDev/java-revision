@@ -1,5 +1,7 @@
 package SeleniumJavaFramework;
 
+import java.util.ArrayList;
+
 public class Main {
 
     static boolean estPair(int n) {
@@ -22,7 +24,6 @@ public class Main {
         return total;
     }
 
-    // Nouveau : méthode void, elle affiche et ne rend rien
     static void afficherMention(int note) {
         if (note >= 16) {
             System.out.println(note + " : Excellent");
@@ -35,7 +36,6 @@ public class Main {
         }
     }
 
-    // Exercice 10 : à compléter
     static void afficherTableau(int[] tab) {
         for (int i = 0; i < tab.length; i++) {
             System.out.println(tab[i]);
@@ -47,14 +47,14 @@ public class Main {
         System.out.println(estPair(4));
         System.out.println(estPair(7));
 
-        // Exercice 4 : while
+        // while
         int k = 10;
         while (k >= 2) {
             System.out.println(k);
             k -= 2;
         }
 
-        // Exercice 5 : tableau
+        // tableau : somme, max, min
         int[] notes = {12, 15, 9, 18, 7};
 
         int total = 0;
@@ -63,7 +63,6 @@ public class Main {
         }
         System.out.println("Somme : " + total);
 
-        // Le plus grand
         int max = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] > max) {
@@ -72,7 +71,6 @@ public class Main {
         }
         System.out.println("Max : " + max);
 
-        // Le plus petit
         int min = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] < min) {
@@ -81,37 +79,62 @@ public class Main {
         }
         System.out.println("Min : " + min);
 
-        // Exercice 6 et 7 : méthodes
+        // méthodes
         System.out.println(maximum(8, 5));
         System.out.println(maximum(3, 10));
         int[] a = {4, 8, 1};
         System.out.println(somme(a));
         System.out.println(somme(notes));
 
-        // Exercice 8 : String
+        // String
         String mot = "Bonjour";
         System.out.println(mot.length());
         System.out.println(mot.charAt(6));
         System.out.println(mot.substring(0, 3));
 
-        // Exercice 9 : comparer des String
         String attendu = "Connexion reussie";
         String obtenu = "connexion reussie";
         System.out.println(attendu.equals(obtenu));
         System.out.println(attendu.equalsIgnoreCase(obtenu));
 
-        // Nouveau : méthodes void
+        // méthodes void
         afficherMention(18);
         afficherMention(13);
         afficherMention(5);
-
-        // Exercice 10
         afficherTableau(notes);
 
+        // objets Personne
         Personne p1 = new Personne("Karim", 25);
-        System.out.println(p1.getNom());   // Karim
-        p1.setAge(26);
-        p1.setAge(-50);                    // refusé par le if
-        p1.sePresenter();                  // Je m'appelle Karim, j'ai 26 ans
+        Personne p2 = new Personne("Sara", 30);
+        p1.sePresenter();
+        p2.sePresenter();
+
+        // la personne la plus âgée
+        Personne[] gens = {
+                new Personne("Karim", 25),
+                new Personne("Sara", 30),
+                new Personne("Omar", 19)
+        };
+
+        Personne plusAgee = gens[0];
+        for (int i = 1; i < gens.length; i++) {
+            if (gens[i].getAge() > plusAgee.getAge()) {
+                plusAgee = gens[i];
+            }
+        }
+        System.out.println(plusAgee.getNom());
+
+        // Exercice 12 : ArrayList (à compléter)
+        ArrayList<Integer> liste = new ArrayList<>();
+        liste.add(12);
+        liste.add(15);
+        liste.add(9);
+        liste.add(18);
+
+        int s = 0;
+        for (int i = 0; i < liste.size(); i++) {
+            s += liste.get(i);
+        }
+        System.out.println("Somme liste : " + s);
     }
 }
