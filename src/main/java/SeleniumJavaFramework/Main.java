@@ -124,7 +124,7 @@ public class Main {
         }
         System.out.println(plusAgee.getNom());
 
-        // Exercice 12 : ArrayList (à compléter)
+        // Exercice 12 : ArrayList
         ArrayList<Integer> liste = new ArrayList<>();
         liste.add(12);
         liste.add(15);
@@ -136,5 +136,15 @@ public class Main {
             s += liste.get(i);
         }
         System.out.println("Somme liste : " + s);
+
+        // Exercice 13 : exception (à compléter)
+        try {
+            int resultat = 10 / 0;
+            System.out.println(resultat);
+        } catch (ArithmeticException e) {
+            System.out.println("Division par zéro impossible");
+        } finally {
+            System.out.println("Toujours exécuté");
+        }
     }
 }
